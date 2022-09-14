@@ -1,5 +1,8 @@
 # USECASE-1 ( SNS,SQS,DynamoDB,S3,Python)
 
+# What you will be learn this usecase :
+
+In our Daily life we are ordering food/grocery items/ clothes on an online platform  . We will order the items in the support platform with zomato, big basket or some different app  . Once we order a pallrell notification will be delivered to the merchant and order platform. Then they will consider the orders and will process further, How the notification happens and how they will  maintain the database . We will discuss this use case . 
 
 
 # Architecture
