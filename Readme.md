@@ -1,25 +1,38 @@
+# AZURE Kubernetes Automation
+
+
+
+# Architecture
+
+[![Watch the image](/architecture.png)]
+
 # Steps
 
-- Step 1:  Install AZURE CLI in Rocky Linux Virtual Machine
-- Step 2:  First install docker in the local linux machine
-- Step 3:  Download a sample application
-- Step 4:  Test the sample application
-- Step 5:  Deploy and use Azure Container Registry
-- Step 6:  Install kubectl command 
-- Step 7:  Deploy an Azure Kubernetes Service (AKS) cluster
-- Step 8:  Run applications in Azure Kubernetes Service (AKS)
-- Step 9:  Scale application in Azure Kubernetes Service (AKS)
-- Step 10: Update the application in Azure Kubernetes Service (AKS)
-
+- Step 1:  Create SNS and SQS then Subscribe to Amazon SNS topic from SQS ( SNS --> SQS)
 
 #
 
-# Step 1: Install AZURE CLI
+# Step 1: Create SNS and SQS then Subscribe to Amazon SNS topic from SQS ( SNS --> SQS)
 
-- Add the azure CLI Repository keys
+- Go to Amazon SNS --> Create topic --> Select standard --> Topic Name --> Create Topic
+- Go to Amazon SQS --> Create queue --> Select Standard --> Queue Name --> Create Queue
+- Open the Queue --> Go to SNS Subscriptions  --> Click Subscribe to Amazon SNS topic --> Select Amazon topic name --> Save
+- Goto SNS --> Select Topic name --> Publish message --> Give subject and also Message like below
 ```
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+{
+    "customer": 100,
+    "phone": 5516999999999,
+    "items": [
+        {
+            "name": "produto 1", "amount": 10},
+        {
+            "name": "produto 2", "amount": 14.4}
+    ]
+}
 ```
+
+-  Go to SQS --> Select queue name --> Send and Recive Message --> Poll for message --> click message --> select Body 
+
 - Configure the azure CLI Repository
 
 ```
