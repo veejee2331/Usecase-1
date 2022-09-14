@@ -4,7 +4,7 @@
 
 # Architecture
 
-[![Watch the image](/architecture.png)]
+[![Watch the image](/Sree-usecase-1.png)]
 
 # Steps
 
